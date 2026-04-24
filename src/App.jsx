@@ -28,14 +28,45 @@ function App() {
 
       {/* NAVBAR */}
       <nav className="flex justify-between items-center p-6 bg-black/30 backdrop-blur-md sticky top-0 z-50">
-        <h1 className="text-xl md:text-2xl font-bold">Rajendra</h1>
 
-        <div className="flex gap-4 md:gap-6">
-          <button onClick={() => setPage("home")} className={page === "home" ? "text-purple-400" : ""}>Home</button>
-          <button onClick={() => setPage("projects")} className={page === "projects" ? "text-purple-400" : ""}>Projects</button>
-          <button onClick={() => setPage("contact")} className={page === "contact" ? "text-purple-400" : ""}>Contact</button>
-        </div>
-      </nav>
+  {/* LOGO + NAME */}
+  <div className="flex items-center gap-3">
+    <img
+      src="/rajendralogo.jpg"   // 👉 put your logo inside public folder
+      alt="logo"
+      className="w-8 h-8 md:w-10 md:h-10 object-contain rounded-full hover:scale-150 duration-500 transition"
+    />
+
+    <h1 className="text-xl md:text-2xl font-bold">
+      Rajendra
+    </h1>
+  </div>
+
+  {/* NAV BUTTONS */}
+  <div className="flex gap-4 md:gap-6">
+    <button
+      onClick={() => setPage("home")}
+      className={page === "home" ? "text-purple-400" : ""}
+    >
+      Home
+    </button>
+
+    <button
+      onClick={() => setPage("projects")}
+      className={page === "projects" ? "text-purple-400" : ""}
+    >
+      Projects
+    </button>
+
+    <button
+      onClick={() => setPage("contact")}
+      className={page === "contact" ? "text-purple-400" : ""}
+    >
+      Contact
+    </button>
+  </div>
+
+</nav>
 
       <div className="p-6 md:p-10">
 
