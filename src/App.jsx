@@ -365,7 +365,7 @@ function App() {
             {/* PDF VIEWER */}
             <div className="w-full h-[80vh] border border-white/20 rounded-xl overflow-hidden">
               <iframe
-                src="/RajendraAcharya.pdf"
+                src="Rajendra_Fullstack.pdf"
                 title="Resume"
                 className="w-full h-full"
               />
