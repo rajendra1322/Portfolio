@@ -13,7 +13,9 @@ import {
 import sportkart from './assets/sportkart.png'
 import rajmart from './assets/rajmart.png'
 import cms from './assets/cms.png'
-
+import dhwani from './assets/dhwani.png'
+import talentflow from './assets/talentflow.png'
+import pokedex from './assets/pokedex.webp'
 
 function App() {
   const [page, setPage] = useState("home");
@@ -29,44 +31,44 @@ function App() {
       {/* NAVBAR */}
       <nav className="flex justify-between items-center p-6 bg-black/30 backdrop-blur-md sticky top-0 z-50">
 
-  {/* LOGO + NAME */}
-  <div className="flex items-center gap-3">
-    <img
-      src="/rajendralogo.jpg"   // 👉 put your logo inside public folder
-      alt="logo"
-      className="w-8 h-8 md:w-10 md:h-10 object-contain rounded-full hover:scale-150 duration-500 transition"
-    />
+        {/* LOGO + NAME */}
+        <div className="flex items-center gap-3">
+          <img
+            src="/rajendralogo.jpg"   // 👉 put your logo inside public folder
+            alt="logo"
+            className="w-8 h-8 md:w-10 md:h-10 object-contain rounded-full hover:scale-150 duration-500 transition"
+          />
 
-    <h1 className="text-xl md:text-2xl font-bold">
-      Rajendra
-    </h1>
-  </div>
+          <h1 className="text-xl md:text-2xl font-bold">
+            Rajendra
+          </h1>
+        </div>
 
-  {/* NAV BUTTONS */}
-  <div className="flex gap-4 md:gap-6">
-    <button
-      onClick={() => setPage("home")}
-      className={page === "home" ? "text-purple-400" : ""}
-    >
-      Home
-    </button>
+        {/* NAV BUTTONS */}
+        <div className="flex gap-4 md:gap-6">
+          <button
+            onClick={() => setPage("home")}
+            className={page === "home" ? "text-purple-400" : ""}
+          >
+            Home
+          </button>
 
-    <button
-      onClick={() => setPage("projects")}
-      className={page === "projects" ? "text-purple-400" : ""}
-    >
-      Projects
-    </button>
+          <button
+            onClick={() => setPage("projects")}
+            className={page === "projects" ? "text-purple-400" : ""}
+          >
+            Projects
+          </button>
 
-    <button
-      onClick={() => setPage("contact")}
-      className={page === "contact" ? "text-purple-400" : ""}
-    >
-      Contact
-    </button>
-  </div>
+          <button
+            onClick={() => setPage("contact")}
+            className={page === "contact" ? "text-purple-400" : ""}
+          >
+            Contact
+          </button>
+        </div>
 
-</nav>
+      </nav>
 
       <div className="p-6 md:p-10">
 
@@ -187,11 +189,11 @@ function App() {
                 className="bg-white/10 backdrop-blur-lg p-5 rounded-xl border border-white/20 shadow-lg"
               >
                 {/* IMAGE */}
-                <div className="w-full h-52 overflow-hidden rounded-lg">
+                <div className="w-full h-100 overflow-hidden rounded-lg">
                   <img
                     src={rajmart}
                     alt="RajMart"
-                    className="w-full h-[230px] object-cover hover:scale-110 transition duration-500"
+                    className="w-full h-[300px] object-cover hover:scale-110 transition duration-500"
                   />
                 </div>
 
@@ -235,12 +237,106 @@ function App() {
                 </a>
               </motion.div>
 
+              {/* ================= dhwani ================= */}
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="bg-white/10 backdrop-blur-lg p-5 rounded-xl border border-white/20 shadow-lg"
+              >
+                <div className="w-full h-100 overflow-hidden rounded-lg">
+                  <img
+                    src={dhwani}
+                    alt="Dhwani"
+                    className="w-full h-[300px] object-cover hover:scale-110 transition duration-500"
+                  />
+                </div>
+
+                <h3 className="text-xl font-semibold mt-4 mb-2">Dhwani</h3>
+
+                <ul className="text-gray-400 text-sm space-y-2">
+                  <li>
+                    Event booking and artist management platform designed to simplify event planning and coordination.
+                  </li>
+                  <li>
+                    Features event scheduling, date blocking, booking management, earnings tracking, and media management.
+                  </li>
+                  <li>
+                    Includes a responsive admin dashboard for managing performers, events, and business activities efficiently.
+                  </li>
+                </ul>
+
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {["MongoDB", "Express.js", "React.js", "Node.js"].map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-purple-600/30 text-purple-300 rounded-full text-xs hover:scale-110 transition duration-500"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                {/* LINK */}
+                <a
+                  href="https://dhwanievents.vercel.app"
+                  target="_blank"
+                  className="block mt-4 text-purple-400 text-sm hover:underline"
+                >
+                  🔗 View Live Project
+                </a>
+              </motion.div>
+
+              {/* ================= TalentFlowAI ================= */}
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="bg-white/10 backdrop-blur-lg p-5 rounded-xl border border-white/20 shadow-lg"
+              >
+                <div className="w-full h-100 overflow-hidden rounded-lg">
+                  <img
+                    src={talentflow}
+                    alt="TalentFlow-AI"
+                    className="w-full h-[300px] object-cover hover:scale-110 transition duration-500"
+                  />
+                </div>
+
+                <h3 className="text-xl font-semibold mt-4 mb-2">TalentFlow-AI</h3>
+
+                <ul className="text-gray-400 text-sm space-y-2">
+                  <li>
+                    AI-powered recruitment platform with role-based authentication for recruiters and job seekers.
+                  </li>
+                  <li>
+                    Implements resume parsing, intelligent candidate matching, automated hiring pipelines, and job management.
+                  </li>
+                  <li>
+                    Provides analytics dashboards, Cloudinary resume storage, and automated email notifications using Brevo.
+                  </li>
+                </ul>
+
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {["MongoDB", "Express.js", "React.js", "Node.js", "Cloudinary", "Brevo"].map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-purple-600/30 text-purple-300 rounded-full text-xs hover:scale-110 transition duration-500"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                {/* LINK */}
+                <a
+                  href="https://talentflow--ai.vercel.app"
+                  target="_blank"
+                  className="block mt-4 text-purple-400 text-sm hover:underline"
+                >
+                  🔗 View Live Project
+                </a>
+              </motion.div>
+
               {/* ================= SPORTSKART ================= */}
               <motion.div
                 whileHover={{ y: -10 }}
                 className="bg-white/10 backdrop-blur-lg p-5 rounded-xl border border-white/20 shadow-lg"
               >
-                <div className="w-full h-52 overflow-hidden rounded-lg">
+                <div className="w-full h-100 overflow-hidden rounded-lg">
                   <img
                     src={sportkart}
                     alt="SportsKart"
@@ -271,16 +367,65 @@ function App() {
                 </div>
               </motion.div>
 
+              {/* ================= POKEDEX ================= */}
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="bg-white/10 backdrop-blur-lg p-5 rounded-xl border border-white/20 shadow-lg"
+              >
+                <div className="w-full h-100 overflow-hidden rounded-lg">
+                  <img
+                    src={pokedex}
+                    alt="Pokedex Lite"
+                    className="w-full h-[300px] object-cover hover:scale-110 transition duration-500"
+                  />
+                </div>
+
+                <h3 className="text-xl font-semibold mt-4 mb-2">Pokedex Lite</h3>
+
+                <ul className="text-gray-400 text-sm space-y-2">
+                  <li>
+                    Pokémon explorer application with search, filtering, and pagination using PokéAPI.
+                  </li>
+                  <li>
+                    Displays detailed Pokémon information including stats, abilities, height, and weight.
+                  </li>
+                  <li>
+                    Built with React, Tailwind CSS, and Framer Motion, featuring favorites and responsive design.
+                  </li>
+
+                </ul>
+
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {["React.js", "Vite", "Tailwind CSS", "Framer Motion", "PokéAPI"].map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-purple-600/30 text-purple-300 rounded-full text-xs hover:scale-110 transition duration-500"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href="https://pokedex--lite.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block mt-4 text-purple-400 text-sm hover:underline"
+                >
+                  🔗 View Live Project
+                </a>
+              </motion.div>
+
               {/* ================= CATERING ================= */}
               <motion.div
                 whileHover={{ y: -10 }}
                 className="bg-white/10 backdrop-blur-lg p-5 rounded-xl border border-white/20 shadow-lg"
               >
-                <div className="w-full h-52 overflow-hidden rounded-lg">
+                <div className="w-full h-100 overflow-hidden rounded-lg">
                   <img
                     src={cms}
                     alt="Catering System"
-                    className="w-full h-[250px] object-cover hover:scale-110 transition duration-500"
+                    className="w-full h-[300px] object-cover hover:scale-110 transition duration-500"
                   />
                 </div>
 
@@ -365,7 +510,7 @@ function App() {
             {/* PDF VIEWER */}
             <div className="w-full h-[80vh] border border-white/20 rounded-xl overflow-hidden">
               <iframe
-                src="Rajendra_Fullstack.pdf"
+                src="Rajendra__Fullstack.pdf"
                 title="Resume"
                 className="w-full h-full"
               />
